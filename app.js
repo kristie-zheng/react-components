@@ -1,10 +1,10 @@
 /*jshint esversion: 6*/
 // TODO
 
-var GroceryList = (item1, item2) => (
+var GroceryList = (props) => (
   <ul>
-  <Strawberries />
-  <Cherries />
+  <li>{props.items[0]}</li>
+  <li>{props.items[1]}</li>
   </ul>
 );
 
@@ -16,4 +16,4 @@ var Cherries = () => (
   <li>Cherries</li>
 )
 
-  ReactDOM.render(<GroceryList />, document.querySelector("#app"));
+  ReactDOM.render(<GroceryList items={['cherry', 'strawberry']}/>, document.querySelector("#app"));
